@@ -1,4 +1,4 @@
 FROM ghcr.io/infrasonar/python:3.12.9
 RUN apt-get update && apt-get install -y tmate
 COPY .tmate.conf /root/.tmate.conf
-CMD ["/bin/sh", "-c", "tmate -F 1>&2"]
+CMD ["/bin/sh", "-c", "echo 'NOTE: Detach from a session using CTRL+b followed by d.' && tmate -F 1>&2"]
